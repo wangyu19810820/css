@@ -1,0 +1,30 @@
+<!-- 
+    为新css特性提供，浏览器厂商前缀，并利用渐进增强写法
+    支持transform:rotate(180deg);的浏览器会覆盖-xxx-transform:rotate(180deg);
+    暂不支持transform的，会尝试使用-xxx-transform:rotate(180deg);
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        div {
+            background-color: red;
+            -moz-transform:rotate(180deg);
+            -o-transform: rotate(180deg);
+            -webkit-transform:rotate(180deg);
+            transform:rotate(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>aaaaaaaaaaaaaaa</div>
+
+</body>
+</html>

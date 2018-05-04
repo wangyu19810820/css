@@ -1,0 +1,107 @@
+<!--
+    ::before,::after伪元素，描述某个元素前和后的虚拟元素
+    伪元素内的content属性，描述伪元素的输出内容
+    是css2的内容，各浏览器支持良好，ie8使用伪元素需采用单冒号:before,:after
+    ie7和ie7以下不支持伪元素，可以用空白span元素模拟类似效果
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .article {
+            width:300px;
+            background-color:lemonchiffon;
+            padding:10px;
+            margin: 10px;
+            /* 为4个边角添加不同的圆角效果 */
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .article .left {
+            float: left;
+            width: 100px;
+            text-align: center;
+        }
+        .article .left img {
+            width: 80px;
+            height: 80px;
+            margin: 0px auto;
+        }
+        .article .right {
+            float: right;
+            padding: 10px;
+            background-color:greenyellow;
+            width: 170px;
+            position: relative;
+            min-height: 200px;
+            /* url折行显示 */
+            word-wrap:break-word;
+            /* 边框背景采用圆角矩形 */
+            -moz-border-radius:20px;
+            -webkit-border-radius:20px;
+            border-radius: 20px;
+        }
+        .article .clearFix {
+            clear: both;
+        }
+
+        /* css粗边框模拟三角形 */
+        .triangles {
+            border-color: red green blue orange;
+            border-style: solid;
+            border-width: 20px;
+            width: 0;
+            height: 0;
+        }
+        .triangle-left {
+            border-color: transparent green transparent transparent;
+            border-style: solid;
+            border-width: 20px;
+            width: 0;
+            height: 0;
+        }
+
+        /* 伪元素,采用单冒号兼容ie8 */
+        .right:after {
+            content: "\00A0";       /* 伪元素的内容：一个空格的Unicode写法 */
+            display: block;
+            position: absolute;     /* 父元素设置成position: relative;否则有定位错误 */
+            top: 20px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-width: 10px 20px 10px 0; 
+            border-style: solid;
+            border-color: transparent #000 transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="article">
+        <div class="left">
+            <img src="a.jpg" alt="">
+            <p>Jim Allen Green</p>
+            <small>2010-11-22</small>        
+        </div>
+        <div class="right">
+                “儿医荒”怎么破？广州宣布：儿童看病加价30%
+                http://xinwen.eastday.com/a/180504114712555.html?qid=news.baidu.com
+        </div>
+        <div class="clearFix"></div>
+    </div>
+
+    <div class="triangles"></div>
+    <div class="triangle-left"></div>
+
+</body>
+</html>

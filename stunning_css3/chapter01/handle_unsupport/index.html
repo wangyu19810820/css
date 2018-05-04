@@ -1,0 +1,31 @@
+<!--
+    div用两个background
+    现代浏览器会采用后一个写法提供半透明背景+白色文字，background: hsla(0, 100%, 40%, .5);
+    IE8会采用前一种写法，提供一个红色不透明背景+白色文字，background: #cc0000;
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background:url(b.jpg) no-repeat 5px 5px;
+            color:snow;
+        }
+        div {
+            background: #cc0000;
+            background: hsla(0, 100%, 40%, .5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        aaaaaaaa aaaaaaa<br>
+        aaaaaaaa aaaaaaa<br>
+        aaaaaaaa aaaaaaa<br>
+    </div>
+</body>
+</html>
