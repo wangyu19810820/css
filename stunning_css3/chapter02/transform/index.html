@@ -1,0 +1,137 @@
+<!--
+    css3变形，旋转
+    transform:rotate(-5deg);
+    早期浏览器需加前缀才支持
+    IE8及以下不支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .article {
+            width:300px;
+            background: url(b.jpg);
+            padding:10px;
+            margin: 10px;
+            /* 为4个边角添加不同的圆角效果 */
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .article .left {
+            float: left;
+            width: 100px;
+            text-align: center;
+        }
+        .article .left img {
+            width: 80px;
+            height: 80px;
+            margin: 0px auto;
+            /* css变形，旋转 */
+            -webkit-transform:rotate(-5deg);
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+        }
+        .article .left p {
+            /* 用文字阴影使姓名和日期，两处不明显的内容显示更明显一些 */
+            text-shadow:1px 1px 0px hsla(0, 0%, 100%, 0.7);
+        }
+        .article .left small {
+            text-shadow:1px 1px 0px hsla(0, 0%, 100%, 0.7);
+        }
+        .article .right {
+            float: right;
+            padding: 10px;
+            width: 170px;
+            position: relative;
+            min-height: 200px;
+            /* hsla色彩系统，色调，饱和度，亮度，不透明度 */
+            background-color:#A6DADC;
+            background-color:hsla(182, 44%, 76%, 0.5);
+            /* url折行显示 */
+            word-wrap:break-word;
+            /* 边框背景采用圆角矩形 */
+            -moz-border-radius:20px;
+            -webkit-border-radius:20px;
+            border-radius: 20px;
+            /* w3c渐变语法，方向，开始颜色（渐变开始位置），结束颜色（渐变结束位置） */
+            background-image: linear-gradient(
+                to bottom,
+                hsla(0, 0%, 100%, 0.6) 0px,
+                hsla(0, 0%, 100%, 0) 30px
+            );
+            /* 阴影的：水平偏移，垂直偏移，模拟距离，阴影距离，颜色 */
+            box-shadow: 3px 3px 2px 0px hsla(0, 0%, 0%, 0.3);
+        }
+        .article .right:hover {
+            /* 利用阴影变化，创造3D假象 */
+            box-shadow: 4px 4px 3px 1px hsla(0, 0%, 0%, 0.3);        
+            /* 阴影的：水平偏移，垂直偏移，模拟距离，颜色 */
+            text-shadow: 1px 1px 1px hsla(0, 0%, 100%, 0.7);
+        }
+
+        .article .clearFix {
+            clear: both;
+        }
+
+        /* 伪元素,采用单冒号兼容ie8 */
+        .right:after {
+            content: "\00A0";       /* 伪元素的内容：一个空格的Unicode写法 */
+            display: block;
+            position: absolute;     /* 父元素设置成position: relative;否则有定位错误 */
+            top: 20px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-width: 10px 20px 10px 0; 
+            border-style: solid;
+            /* hsla色彩系统，色调，饱和度，亮度，不透明度 */
+            border-color: transparent #A6DADC transparent transparent;
+            border-color: transparent hsla(182, 44%, 76%, 0.5) transparent transparent;
+        }
+
+        .color {
+            width:120px;
+            height:120px;
+            margin:10px;
+        }
+
+        .transform {
+            /* css变形，旋转 */
+            -webkit-transform:rotate(-5deg);
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+        }
+
+    </style>
+</head>
+<body style="background-color: aquamarine">
+    
+    <div class="article">
+        <div class="left">
+            <img src="a.jpg" alt="">
+            <p>Jim Allen Green</p>
+            <small>2010-11-22</small>        
+        </div>
+        <div class="right">
+                “儿医荒”怎么破？广州宣布：儿童看病加价30%
+                http://xinwen.eastday.com/a/180504114712555.html?qid=news.baidu.com
+        </div>
+        <div class="clearFix"></div>
+    </div>
+
+    <div class="color transform" style="background-color: red;font-size: 20px;">
+        aaaaaaaaaaaa
+    </div>
+
+
+</body>
+</html>
