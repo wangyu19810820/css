@@ -1,9 +1,8 @@
 <!--
-    css3的HSLA色彩表示法更直观
-    background-color:hsla(90, 44%, 76%, 0.5);
-    4个参数分别是色调，饱和度，亮度，不透明度
-    IE8及以下不支持，其它浏览器支持良好
-    针对IE8可利用不透明普通色弥补，或用png图片，或微软滤镜模拟
+    css3的盒容器阴影
+    box-shadow: 3px 3px 2px 0px hsla(0, 0%, 0%, 0.3);
+    参数为，阴影的：水平偏移，垂直偏移，模拟距离，阴影距离，颜色
+    IE8和以下不支持，可用滤镜或PIE脚本修正
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +51,20 @@
             -moz-border-radius:20px;
             -webkit-border-radius:20px;
             border-radius: 20px;
+            /* w3c渐变语法，方向，开始颜色（渐变开始位置），结束颜色（渐变结束位置） */
+            background-image: linear-gradient(
+                to bottom,
+                hsla(0, 0%, 100%, 0.6) 0px,
+                hsla(0, 0%, 100%, 0) 30px
+            );
+            /* 阴影的：水平偏移，垂直偏移，模拟距离，阴影距离，颜色 */
+            box-shadow: 3px 3px 2px 0px hsla(0, 0%, 0%, 0.3);
         }
+        .article .right:hover {
+            /* 利用阴影变化，创造3D假象 */
+            box-shadow: 4px 4px 3px 1px hsla(0, 0%, 0%, 0.3);        
+        }
+
         .article .clearFix {
             clear: both;
         }
@@ -74,44 +86,16 @@
         }
 
         .color {
-            width:20px;
-            height:20px;
+            width:120px;
+            height:120px;
             margin:10px;
         }
 
-        .hsl {
-            /* HSL颜色，3个值代表色调，饱和度，亮度 */
-            background: hsl(90, 50%, 50%);
+        .shadow {
+            /* 阴影的：水平偏移，垂直偏移，模拟距离，阴影距离，颜色 */
+            box-shadow: 0px 2px 2px 4px hsla(0, 0%, 0%, 1);
         }
 
-        .hsla {
-            /* HSLA颜色，4个值代表色调，饱和度，亮度，不透明度 */
-            background: hsla(90, 50%, 50%, .5);
-        }
-
-        .hslaBlack {
-            /* 亮度为0%就是黑色 */
-            background: hsla(0, 0%, 0%, 1);
-        }
-
-        .hslaWhite {
-            /* 亮度为100%就是白色色 */
-            background: hsla(0, 0%, 100%, 1);
-        }
-
-        .hslaGray {
-            /* 饱和度0%为灰色，亮度大小控制灰色的深浅 */
-            background: hsla(0, 0%, 50%, 1);
-        }
-
-        .hslaRed {
-            /* 饱和度100%是纯色，色调值为0是红色，亮度控制是暗红还是粉红 */
-            background: hsla(0, 100%, 50%, 1);
-        }
-
-        .rgbaRed {
-            background: rgba(255, 0, 0, 1);
-        }
     </style>
 </head>
 <body style="background-color: aquamarine">
@@ -129,13 +113,8 @@
         <div class="clearFix"></div>
     </div>
 
-    <div class="color hsl"></div>
-    <div class="color hsla"></div>
-    <div class="color hslaBlack"></div>
-    <div class="color hslaWhite"></div>
-    <div class="color hslaGray"></div>
-    <div class="color hslaRed"></div>
-    <div class="color rgbaRed"></div>
+    <div class="color shadow"></div>
+
 
 </body>
 </html>
