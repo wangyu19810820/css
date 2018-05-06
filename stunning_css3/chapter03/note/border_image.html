@@ -1,0 +1,29 @@
+<!--
+    border-image指定盒容器边框的图片
+    支持：简单拉伸、智能无裁剪平铺、简单平铺、间隔平铺
+    相当于从a.jpg中扣出4条边框的图片，应用到盒容器中
+    仅IE11和Edge支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .border_image{
+        border-style: solid;
+        border-width: 25px 45px 45px 45px;
+        /* border-image: url(a.jpg) 25 45 45 45 stretch;  */
+        /* border-image: url(a.jpg) 25 45 45 45 round;  */
+        /* border-image:url(a.jpg) 45 repeat; */
+        border-image:url(a.jpg) 45 space;
+     }
+    </style>
+</head>
+<body>
+    <div class="border_image">
+        这个九宫格各区域展示方式的标注图在border-image中是通用的，无论border-image的代码如何改变，其显示效果的原理核心就是左边这张九宫标注图，亘古不变的是四个边角，这四个边角就是四条边框的重叠区域，不会有拉伸或是重复的展现效果。有变化的就是四边区域和中心区域，这几个区域中的水平和垂直属性也是稳如泰山，屹立不变的，改变的就只是“拉伸”而已，变成重复啦或是平铺。
+    </div>
+</body>
+</html>

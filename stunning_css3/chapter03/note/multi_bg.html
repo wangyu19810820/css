@@ -1,0 +1,44 @@
+<!-- 
+    指定盒容器的多个背景，只需在background属性中用逗号分隔即可
+    如果多个背景需用不同大小，background-size属性中也用逗号分隔
+    IE9及以上支持。用伪元素可以在IE8下模拟复合背景，IE6-7只能采用嵌套div模拟
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: url(thumbtack.png) 50% 3px no-repeat,
+                url(stains1.png) 0% 10% no-repeat,
+                url(paperlines.gif);
+            background-size: auto, 40% 40%, auto 1.3em;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    </div>
+</body>
+</html>
