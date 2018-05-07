@@ -1,0 +1,64 @@
+<!--
+    css3的背景大小
+    background-size: width height;
+    也可设置为相对于容器的百分比
+    或者一个值设置成具体值，另一个设成auto
+    cover，覆盖容器。按图片长宽比缩放背景图，全覆盖容器，图片可能被部分裁剪
+    contain，完整包含图片。按图片长宽比缩放背景图，一端顶住容器，图片能最大化显示全，容器可能没有被全覆盖
+    IE9及以下不支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .article {
+            width:1000px;
+            height: 1000px;
+            padding:10px;
+            margin: 10px;
+            word-wrap: break-word;
+            background: url(a.png) blue;
+            background-repeat:no-repeat;
+            /* 图片原始大小 */
+            /* background-size: auto; */
+
+            /* 容器的25%宽，50%高 */
+            /* background-size: 25% 50%; */
+
+            /* 容器的50%宽，维持图片长宽比，高度自动赋值 */
+            background-size: 50% auto;
+
+            /* 维持图片长宽比，全覆盖容器，图片可能会被裁剪 */
+            /* background-size: cover; */
+
+            /* 维持图片长宽比，容器包含最大化的图片，图片不会被裁剪，但是容器有可能部分没覆盖图片 */
+            /* background-size: contain; */
+        }
+
+
+    </style>
+</head>
+<body style="padding:10px;background-color: red;">
+    
+    <div class="article">
+        征地拆迁，对加快城市建设，提高市民生活水平本来是一件好事。但是，却让一些人嗅到了发不义之财的“商机”。
+        近日，浙江省杭州市江干区就陆续接到了关于征地拆迁的匿名举报信，这是怎么回事？
+        群众举报信揭出征地拆迁腐败案
+        近日，浙江省杭州市江干区纪委监察委陆续收到群众匿名举报，反映牛田社区的周岳甫在担任党委书记期间，利用协助人民政府从事土地征迁管理等职务便利，在征地拆迁、工程开发建设领域收受贿赂的问题。
+        征地拆迁，对加快城市建设，提高市民生活水平本来是一件好事。但是，却让一些人嗅到了发不义之财的“商机”。
+        近日，浙江省杭州市江干区就陆续接到了关于征地拆迁的匿名举报信，这是怎么回事？
+        群众举报信揭出征地拆迁腐败案
+        近日，浙江省杭州市江干区纪委监察委陆续收到群众匿名举报，反映牛田社区的周岳甫在担任党委书记期间，利用协助人民政府从事土地征迁管理等职务便利，在征地拆迁、工程开发建设领域收受贿赂的问题。
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!--
+    属性存在选择器
+    [attr]拥有属性attr
+    [attr=val]属性attr完全等于val
+    [attr~=val]属性attr用空格分隔后，其中一小段完全等于val
+    [attr!=val]属性attr完全等于val，或者val-xx，xx必修存在
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 拥有属性attr */
+        div[class] {
+            background-color:red;
+        }
+
+        /* 属性attr完全等于val */
+        div[class="class-A class-B"]{
+            background-color:blue;
+        }
+
+        /* 属性attr用空格分隔后，其中一小段完全等于val */
+        div[class~="class-A"] {
+            background-color: green;
+        }
+
+        /* 属性attr完全等于val，或者匹配val-xx，xx必修存在 */
+        div[class|="class"] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        aaaaaaaaaaaa
+    </div>
+    <div class="class_A">
+        aaaaaaaaaaaa
+    </div>
+    <div class="classB">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class_">
+        aaaaaaaaaaaa
+    </div>
+    <div class="classA class-B">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class-A class-B">
+        aaaaaaaaaaaa
+    </div>
+</body>
+</html>

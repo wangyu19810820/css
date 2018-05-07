@@ -1,0 +1,57 @@
+<!--
+    属性匹配选择器
+    [attr^=val] attr属性以val开头
+    [attr$=val] attr属性以val结尾
+    [attr*=val] attr属性包含val
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* attr属性以val开头 */
+        div[class^=class] {
+            background-color:red;
+        }
+
+        /* attr属性以val结尾 */
+        div[class$=_A] {
+            background-color:blue;
+        }
+
+        /* attr属性包含val */
+        div[class*="-"] {
+            background-color:green;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        aaaaaaaaaaaa
+    </div>
+    <div class="class_A">
+        aaaaaaaaaaaa
+    </div>
+    <div class="classB">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class_">
+        aaaaaaaaaaaa
+    </div>
+    <div class="classA class-B">
+        aaaaaaaaaaaa
+    </div>
+    <div class="class-A class-B">
+        aaaaaaaaaaaa
+    </div>
+</body>
+</html>
