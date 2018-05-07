@@ -1,0 +1,44 @@
+<!--
+    同类型子元素序号选择器
+    :nth-of-type(even)，:nth-of-type(odd)，:nth-of-type(2n+1)
+    偶数，奇数，序号2n+1
+    计算序号的时候只计算全部同标签名子元素，
+    所以其他不相关兄弟节点不会造成干扰项
+    IE9及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        p:nth-of-type(even) a {
+            color: red;
+        }
+        p:nth-of-type(odd) a {
+            color: yellow;
+        } 
+        
+        /* p:nth-of-type(2n+1) a {
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <div>bbbbbbbb</div>
+        <p><a href="#">link1</a></p>
+        <p><a href="#">link2</a></p>
+        <p><a href="#">link3</a></p>
+        <p><a href="#">link4</a></p>
+        <p><a href="#">link5</a></p>
+        <p><a href="#">link6</a></p>
+        <p><a href="#">link7</a></p>
+        <p><a href="#">link8</a></p>
+        <p><a href="#">link9</a></p>
+        <p><a href="#">link10</a></p>
+    </div>
+</body>
+</html>

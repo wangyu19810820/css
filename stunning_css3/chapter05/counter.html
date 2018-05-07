@@ -1,0 +1,53 @@
+<!--
+    counter-reset: count1;              重设计数器count1。
+    counter-increment: count1;          计数器count1计数加1。
+    counter(count1);                    取得计数器中的数值。
+    counter(count1, cjk-ideographic);   取得计数器中的中文数值。
+    IE8及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            counter-reset: count1;
+        }
+        div p {
+            counter-increment: count1;
+        }
+        .div1 p:before {
+            content:counter(count1, cjk-ideographic) "、";
+        }
+        .div2 p:before {
+            content:counter(count1) ":";
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <p>aaaa1</p>
+        <p>aaaa2</p>
+        <p>aaaa3</p>
+        <p>aaaa4</p>
+        <p>aaaa5</p>
+    </div>
+
+    <button onclick="skin1()">皮肤1</button>
+    <button onclick="skin2()">皮肤2</button>
+
+    <script>
+        function skin1() {
+            var d = document.getElementById("div1");
+            d.className = "div1";
+        }
+        function skin2() {
+            var d = document.getElementById("div1");
+            d.className = "div2";
+        }
+    </script>
+</body>
+</html>

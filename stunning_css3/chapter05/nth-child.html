@@ -1,0 +1,44 @@
+<!--
+    子元素序号选择器
+    :nth-child(even)，:nth-child(odd)，:nth-child(2n+1)
+    偶数，奇数，序号2n+1
+    计算序号的时候将全部子元素都计算在内，
+    所以其他兄弟节点可能会造成干扰项
+    IE9及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        p:nth-child(even) a {
+            color: red;
+        }
+        p:nth-child(odd) a {
+            color: yellow;
+        } 
+        */
+        p:nth-child(2n+1) a {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>bbbbbbbb</div>
+        <p><a href="#">link1</a></p>
+        <p><a href="#">link2</a></p>
+        <p><a href="#">link3</a></p>
+        <p><a href="#">link4</a></p>
+        <p><a href="#">link5</a></p>
+        <p><a href="#">link6</a></p>
+        <p><a href="#">link7</a></p>
+        <p><a href="#">link8</a></p>
+        <p><a href="#">link9</a></p>
+        <p><a href="#">link10</a></p>
+    </div>
+</body>
+</html>

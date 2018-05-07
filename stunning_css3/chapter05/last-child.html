@@ -1,0 +1,63 @@
+<!--
+    :last-child最后一个元素
+    :nth-last-child(2n+1)最后第2n+1个元素
+    :nth-last-of-type(2n+1)最后第2n+1个同标签名的元素
+    可用于去除最后一个元素的右边距，让一行塞入更多元素
+    IE9及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1, #div2 {
+            height: 230px;
+            width: 100%;
+        }
+
+        .content {
+            margin-right:40px;
+            margin-bottom:10px;
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #div1 div.content:nth-last-of-type(1) {
+            margin-right:0;
+            background-color: gray;
+        }
+
+        div[id]:last-child {
+            background-color: gold;
+        }
+
+        div#div2 div:nth-last-child(2n + 1) {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+
+    <div id="div2">
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+        <div class="content">aaa</div>
+    </div>
+</body>
+</html>
