@@ -86,7 +86,42 @@
             margin: 0 0 10px 20px;
             border: 1px solid #ccc;
         }
-
+        ul a {
+            display: block;
+            min-height: 15px;
+            padding-left: 2em;
+            background-repeat: no-repeat;
+            background-position: 0 3px;
+            background-size: 1.6em;
+        }
+        a[href$=".pdf"] {
+            background-image: url(icon_pdf.png);
+        }
+        a[href$=".pdf"]:after {
+            content:"[PDF]";
+        }
+        a[href$=".doc"] {
+            background-image: url(icon_doc.png);
+        }
+        a[href$=".jpg"] {
+            background-image: url(icon_photo.png);
+        }
+        a[href$=".mov"] {
+            background-image: url(icon_film.png);
+        }
+        a[href$=".jpg"][href*="sheep."]{
+            background-image: url(icon_chart.png);
+        }
+        img[src*=map] {
+            float: left;
+            margin: 0 20px 10px 0;
+        }
+        img[src*=".jpg"] {
+            padding: 5px 5px 30px 5px;
+            background: #fff;
+            box-shadow: 3px 6px 8px -4px #999;
+            transform: rotate(3deg);
+        }
     </style>
 </head>
     <body>
@@ -95,32 +130,32 @@
             <p>In May and June 2007, Cary and I spent 15 days traveling around England (plus a very brief detour into Wales). It was our first trip to Europe. We had very briefly been out of the USA the year before, when we jaunted up into Montreal for a few hours during our Vermont vacation, but this was our first significant out-of-country trip. We had a fabulous time!</p>
             <p>The trip was heavily focused around Jane Austen sites, both those from her life as well as a few from the 1995 mini-series Pride &amp; Prejudice. You see, I am an unapologetic Janeite, and I have a very understanding and loving husband.</p>
             <h2>Itinerary</h2>
-            <img src="thumbnails/map.png" width="100" height="100" alt="">
+            <img src="map.png" width="100" height="100" alt="">
             <p>The trip began on May 19, 2007, when we flew into the Manchester airport. We flew back home from London on June 3. We rented a car for the entire non-London portion of our trip, so we were able to explore around quite a bit. You can download the documents listed below to get an overview of where we went and what we did each day.</p>
             <h3>Download:</h3>
             <ul>
-                <li><a href="documents/itinerary.pdf">Itinerary (PDF)</a></li>
-                <li><a href="documents/itinerary.doc">Itinerary (Word)</a></li>
-                <li><a href="documents/map.pdf">Map of trip locations (PDF)</a></li>
+                <li><a href="itinerary.pdf">Itinerary</a></li>
+                <li><a href="itinerary.doc">Itinerary (Word)</a></li>
+                <li><a href="map.pdf">Map of trip locations</a></li>
             </ul>
             <h2>Derbyshire</h2>
-            <img src="photos/derbyshire.jpg" width="320" height="214" alt="">
+            <img src="derbyshire.jpg" width="320" height="214" alt="">
             <p>We visited Derbyshire on the first three days of our trip. We stayed at a B&amp;B called <a href="www.bassettwoodfarm.co.uk">Bassett Wood Farm</a> in the little village of Tissington, where the annual <a href="http://en.wikipedia.org/wiki/Well_dressing">well dressing</a> happened to be occuring at the same time. The landscape of Derbyshire was gorgeous; I can see why Elizabeth Bennet was so impressed. My highlights were visiting the two houses used for Pemberley in the Pride &amp; Prejudice mini-series. I even got to see the little pond where Colin Firth's famous wet shirt scene occurs.</p>
             <h3>Download:</h3>
             <ul>
-                <li><a href="video/cary.mov">Cary riding a horse for the first time (MOV)</a></li>
-                <li><a href="photos/lymepark.jpg">Zoe at Lyme Park</a></li>
-                <li><a href="photos/dovedale.jpg">Cary and Zoe in Dovedale Valley</a></li>
-                <li><a href="photos/sudburyhall.jpg">Zoe at Sudbury Hall</a></li>
+                <li><a href="cary.mov">Cary riding a horse for the first time (MOV)</a></li>
+                <li><a href="lymepark.jpg">Zoe at Lyme Park</a></li>
+                <li><a href="dovedale.jpg">Cary and Zoe in Dovedale Valley</a></li>
+                <li><a href="sudburyhall.jpg">Zoe at Sudbury Hall</a></li>
             </ul>
             <h2>Cotswolds</h2>
-            <img src="photos/cotswolds.jpg" width="320" height="240" alt="">
+            <img src="cotswolds.jpg" width="320" height="240" alt="">
             <p>The next seven days were spent traveling all around the Cotswolds and the surrounding area. We stayed at a cottage in the famously picturesque village of Bibury. We explored more than a dozen other Cotswolds villages.</p>
             <p>One of our favorite towns in the Cotswolds was Cirencester, because of the great food we had there and the <a href="http://www.cirencester.co.uk/coriniummuseum/">Corinium Museum</a>. The collection of Roman (and earlier) artifacts at the museum was much larger than we expected and quite fascinating.</p>
             <p>The more ancient something is, the better Cary loves it, especially if it's all in ruins. So, Cary's highlights in the Cotswolds were not just the Roman museum but also the unearthed <a href="http://www.chedworthromanvilla.com/">Chedworth Roman Villa</a> and the ruins of Minster Lovell Hall. One of our favorite memories from the area was our wet, cold trek to the Belas Knap burial mound, built around 2500 BC. Drying out and warming up in the pub afterwards was lovely, and the whole thing was just so English.</p>
             <h3>Download:</h3>
             <ul>
-                <li><a href="photos/sheep.jpg">Zoe and Cary in a field of sheep</a></li>
+                <li><a href="sheep.jpg">Zoe and Cary in a field of sheep</a></li>
                 <li><a href="photos/bibury.jpg">Zoe in Bibury</a></li>
                 <li><a href="photos/ruins.jpg">Cary at Minster Lovell Hall</a></li>
             </ul>

@@ -1,0 +1,35 @@
+<!--
+    :not伪类和属性选择器联合使用
+    div:not([class*=aa])
+    含义div中class属性中不含aa字符的
+    IE9及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div中class属性中不含aa */
+        div:not([class*=aa]) {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aa">
+        aaaaaaaaaaaa
+    </div>
+
+    <div class="classA">
+        aaaaaaaaaaaa
+    </div>
+
+    <section>
+        bbbbbbbbbbbb
+    </section>
+        
+</body>
+</html>
