@@ -10,6 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: 'Prelude';
+            src: url('fonts/preludeflf-webfont.eot') format('eot'),
+                url('fonts/preludeflf-webfont.woff') format('woff'), 
+                url('fonts/preludeflf-webfont.ttf') format('truetype'), 
+                url('fonts/preludeflf-webfont.svg#webfont') format('svg');
+        }
+
+        @font-face {
+            font-family: 'Prelude';
+            src: url('fonts/preludeflf-bold-webfont.eot') format('eot'),
+                url('fonts/preludeflf-bold-webfont.woff') format('woff'), 
+                url('fonts/preludeflf-bold-webfont.ttf') format('truetype'), 
+                url('fonts/preludeflf-bold-webfont.svg#webfont') format('svg');
+            font-weight: bold;
+        }
+
         * {
             padding: 0;
             margin: 0;
@@ -44,7 +61,7 @@
         h1 {
             margin: -.3em 0 .14em 0;
             color: #414141;
-            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+            font-family: Prelude, Helvetica, "Helvetica Neue", Arial, sans-serif;
             font-size: 3.5em;
             font-weight: normal;
         }
