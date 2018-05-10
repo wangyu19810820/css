@@ -1,0 +1,46 @@
+<!--
+    媒体类型
+    @import url("fancyfonts.css") screen;
+    @media print {
+        /* style sheet for print goes here */
+    }
+    其中screen代表屏幕，print代表打印，会应用不同的专属样式
+    完整的媒体类型可参考https://www.w3.org/TR/CSS21/media.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        @import url("screen.css") screen;
+        @import url("print.css") print;
+        @import url("all.css") all;
+        @media screen {
+            /* 屏幕 */
+            .div1 {
+                font-size:10px;
+            }
+        }
+        @media print {
+            /* 打印 */
+            .div1 {
+                font-size:100px;
+            }
+        }
+        @media all {
+            /* 所有 */
+            .div1 {
+                font-style: italic;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">aaa</div>
+    <div class="div2">bbb</div>
+</body>
+</html>
