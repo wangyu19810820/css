@@ -1,0 +1,49 @@
+<!--
+    @keyframes fade{...}
+    定义动画，名称为fade
+
+    animation: fade 1s ease-out 0.5s 1;
+    动画名，持续时间，速度效果，延迟时间，重复次数
+
+    animation-fill-mode: forwards;
+    动画结束后，元素展现形式停留在最后1帧
+
+    IE10及以上支持
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义动画，名称为fade */
+        @keyframes fade {
+            0% {background-color:hsla(0, 100%, 50%, 1);}
+            50% {background-color:hsla(45, 100%, 50%, 1);}
+            100% {background-color:hsla(90, 100%, 50%, 1);}
+        }
+
+        div {
+            background-color: hsla(0, 100%, 50%, 1);
+        }
+        div:hover {
+            /* 动画名，持续时间，速度效果，延迟时间，重复次数 */
+            animation: fade 1s ease-out 0.5s 1;
+           
+            /* animation-name: fade;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            animation-timing-function:ease-out; 
+            animation-iteration-count:1; */
+            
+
+            /* 动画结束后，元素展现形式停留在最后1帧 */
+            animation-fill-mode: forwards;  
+        }
+    </style>
+</head>
+<body>
+    <div>aaaaaaaaaaa</div>
+</body>
+</html>
