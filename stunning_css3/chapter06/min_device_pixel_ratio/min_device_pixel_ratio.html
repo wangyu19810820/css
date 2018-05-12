@@ -1,0 +1,26 @@
+<!--
+    @media (-webkit-min-device-pixel-ratio:2)
+    判断是否是视网膜屏,
+    实际尺寸和布局尺寸大于等于2:1的关系，
+    如iPhone6就是2:1,iPhone6 plus就是3:1
+    其中浏览器前缀-webkit-不能少
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @media (-webkit-min-device-pixel-ratio:2) {
+            div {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>aaaa</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+    盒式布局，子元素顺序
+    子元素顺序反转-webkit-box-direction: reverse;
+    挨个指定子元素顺序-webkit-box-ordinal-group:1;-webkit-box-ordinal-group:2;
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sec1 {
+            display: -webkit-box;
+            -webkit-box-direction: reverse;
+        }
+
+        #sec1 * {
+            -webkit-box-flex:1;
+        }
+
+        #sec2 {
+            display: -webkit-box;
+        }
+
+        .div1 {
+            -webkit-box-flex:1;
+            -webkit-box-ordinal-group:2;
+        }
+        .div2 {
+            -webkit-box-flex:1;
+            -webkit-box-ordinal-group:3;
+        }
+        .div3 {
+            -webkit-box-flex:1;
+            -webkit-box-ordinal-group:1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section id="sec1">
+        <div>aa1</div>
+        <div>bb2</div>
+        <div>cc3</div>
+    </section>
+
+    <section id="sec2">
+        <div class="div1">aa1</div>
+        <div class="div2">bb2</div>
+        <div class="div3">cc3</div>
+    </section>
+    
+    
+</body>
+</html>

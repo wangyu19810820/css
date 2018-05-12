@@ -1,0 +1,67 @@
+<!--
+    盒式布局：子元素在父元素内伸缩
+    父元素：
+        元素内采用盒式布局 display: -webkit-box;   
+        子元素排列方向，默认水平-webkit-box-orient: horizontal;
+    子元素：
+        伸缩系数-webkit-box-flex: 1;-webkit-box-flex: 2;
+        总空间富裕的时候，填充空间按比例分配
+        总空间不足的时候，缩减空间按比例分配
+    box是弹性盒旧版本语法，所以需要用浏览器前缀-webkit-
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            display: -webkit-box;
+            display: box;
+            -webkit-box-orient: horizontal;
+            box-orient: horizontal;
+        }
+        .box1 * {
+            border: 1px red solid;
+            word-break: break-all;
+        }
+        .box1 .sub1 {
+            -webkit-box-flex: 1;
+        }
+        .box1 .sub2 {
+            -webkit-box-flex: 2;
+        }
+        .box1 .sub3 {
+            -webkit-box-flex: 3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="sub1">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+        </div>
+        <div class="sub2">
+            bbbbbbbbbbbbbbbbbbb
+
+        </div>
+        <div class="sub3">cccccc</div>
+    </div>
+    <div class="box1">
+        <div class="sub1">
+            aaaa aaa aaa aaa aaa aaaa aaaa aaaaaaa aaaa aaaaaa aaaa aaaa
+        </div>
+        <div class="sub2">
+            aaaa aaa aaa aaa aaa aaaa aaaa aaaaaaa aaaa aaaaaa aaaa aaaa
+        </div>
+        <div class="sub3">
+            aaaa aaa aaa aaa aaa aaaa aaaa aaaaaaa aaaa aaaaaa aaaa aaaa
+        </div>
+    </div>
+</body>
+</html>

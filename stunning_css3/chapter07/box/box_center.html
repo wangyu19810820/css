@@ -1,0 +1,63 @@
+<!--
+    盒式布局
+    行内元素对齐用text-align
+    子元素垂直排列，在父元素上定义-webkit-box-align
+    子元素水平排列，在父元素上定义-webkit-box-pack，子元素不设置伸缩-webkit-box-flex
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         #sec1 {
+            display: -webkit-box;
+            -webkit-box-align: center;
+        }
+
+        #sec1 * {
+            -webkit-box-flex:1;
+            word-break:break-all;
+            border:1px solid red;
+            width: 33%;
+        }
+
+        #sec1 .div2 {
+            text-align: right;
+        }
+
+        #sec1 .div3 {
+            text-align: center;
+        }
+
+        #sec2{
+            display: -webkit-box;
+            -webkit-box-pack:center;
+        }
+        #sec2 * {
+            word-break:break-all;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section id="sec1">
+        <div class="div1">
+            aa1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aa1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aa1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aa1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+        <div class="div2">bb2</div>
+        <div class="div3">cc3</div>
+    </section>
+
+    <section id="sec2">
+        <div class="div1">aa1</div>
+        <div class="div2">bb2</div>
+        <div class="div3">cc3</div>
+    </section>
+</body>
+</html>
