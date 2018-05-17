@@ -1,0 +1,48 @@
+<!--
+	box-sizing: border-box;
+	改变盒模型，长宽大小计算的方式
+	原先长宽不包含padding，margin，border
+	设置后，包括了padding，border
+-->
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="ie6"><![endif]--> 
+<!--[if IE 7]><html lang="en" class="ie7"><![endif]--> 
+<!--[if IE 8]><html lang="en" class="ie8"><![endif]--> 
+<!--[if IE 9]><html lang="en" class="ie9"><![endif]--> 
+<!--[if gt IE 9]><html lang="en"><![endif]-->
+<!--[if !IE]>--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title>Stunning CSS3</title>
+<!--[if lte IE 8]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+<style>
+
+
+/* LAYOUT -------------- */
+#wrapper {
+	
+}
+
+.feature {
+	float: left;
+	width: 30%;
+	margin: 0 3.3% 0 0;
+	padding: 130px 15px 5px 15px;
+	border: 1px dashed #3c9;
+	box-sizing: border-box;
+}               
+
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+
+	<div class="feature">aaa</div>
+	<div class="feature">bbb</div>
+	<div class="feature">ccc</div>
+    
+</div>
+</body>
+</html>

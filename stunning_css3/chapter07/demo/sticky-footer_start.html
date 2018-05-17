@@ -1,3 +1,7 @@
+<!--
+	伸缩盒布局，让页脚处于浏览器最下方
+	父容器应用伸缩盒，垂直排列，主内容设置伸缩，页眉页脚都是固定高度
+-->
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="en" class="ie6"><![endif]--> 
 <!--[if IE 7]><html lang="en" class="ie7"><![endif]--> 
@@ -380,6 +384,18 @@ input[type=submit] {
 	#feature-pastry { background-image: url(images/icon_pastry_128-trans.png); }
 	#feature-dessert { background-image: url(images/icon_dessert_128-trans.png); }
 }
+html, body {
+	height:100%;
+	width:100%;
+}
+#wrapper {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	min-height: 100%; 
+}
+#content {
+	-webkit-box-flex: 1;
+}
 </style>
 </head>
 
@@ -409,24 +425,10 @@ input[type=submit] {
 		
 		<div id="content-main">
 			<h1>You deserve a sweet little treat every now and then.</h1>    
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
 		</div>
     
 		<div id="content-secondary">
-			<div id="newsletter">
-				<h3>Email Newsletter</h3>
-				<p>Sign up to get monthly recipes, exclusive offers and more.</p>
-				<form action="#" method="post" id="form-newsletter">
-					<label for="email">Email:</label>
-					<input type="text" name="email" id="email" value="">
-					<input type="submit" value="subscribe">
-				</form>
-			</div>
-			<div id="specials">
-				<h3 class="badge">Sweet Deals</h3>
-				<h3>Mother's Day Special</h3>
-				<p>Pellen tesque habitant morbi.</p>
-			</div>
+
 		</div>
 		
 	</div>

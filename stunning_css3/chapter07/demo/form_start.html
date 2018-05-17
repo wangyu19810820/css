@@ -1,3 +1,7 @@
+<!--
+	通过设置伸缩盒布局
+	让表单内的文本框能自动伸缩宽度，标题+文本框+按钮充满表单宽度
+-->
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="en" class="ie6"><![endif]--> 
 <!--[if IE 7]><html lang="en" class="ie7"><![endif]--> 
@@ -381,6 +385,20 @@ input[type=submit] {
 	#feature-pastry { background-image: url(images/icon_pastry_128-trans.png); }
 	#feature-dessert { background-image: url(images/icon_dessert_128-trans.png); }
 }
+ 
+#form-newsletter {
+	display: -webkit-box;
+	border: 1px solid red;
+}
+#form-newsletter * {
+	display: block;
+	margin-right: 3px;
+}
+#form-newsletter input[type=text] {
+	-webkit-box-flex: 1;
+	width:auto;
+}
+
 </style>
 </head>
 
